@@ -11,6 +11,18 @@
 - SALT_ROUNDS: a small number
 - BCRYPT_PASSWORD: string
 ###### Run `docker-compose up` to set up database using docker 
+###### In case you cannot use docker, (very rare I think)
+- set up postgresql directly in your machine, set up user and database(or just use default user `postgres` and default database `postgres`), all script to set up table store in migration/sqls folder, use `db-migrate up` to automate those scripts. 
+- Notice that you must fix the environment `database.json` too, db-migrate use data in this file to connect with your local database.  
+###### In case
+
+- Example if you work on ubuntu:
+```
+- sudo apt update -y
+- sudo apt install
+- sudo apt install postgresql postgresql-client
+- sudo systemctl start post
+```
 
 ###### Run `db-migrate up` to set up database tables
 
