@@ -4,6 +4,8 @@
   "description": "",
   "main": "server.ts",
   "scripts": {
+    "db:up": "./node_modules/.bin/db-migrate up",
+    "db:down":"./node_modules/.bin/db-migrate down -c 5",
     "compile": "npx tsc --outDir dist/",
     "start": "nodemon src/server.ts",
     "watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./dist --onSuccess \"node ./dist/server.js\"",

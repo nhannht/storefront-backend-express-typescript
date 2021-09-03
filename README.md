@@ -1,7 +1,7 @@
 ### How to use it
 ###### `yarn install`
 
-###### Set up .env file and database.json in project root with these environment variables, just copy it if you want
+###### Set up .env file and database.json(I not hide database.json, just reuse) in project root with these environment variables, just copy below to .env if you want
 ```dotenv
 POSTGRES_HOST=127.0.0.1
 POSTGRES_TEST_DB=postgres
@@ -30,16 +30,16 @@ BCRYPT_PASSWORD=password
 - sudo apt update -y
 - sudo apt install
 - sudo apt install postgresql postgresql-client
-- sudo systemctl start post
+- sudo systemctl start postgresql
 ```
 
-###### Run `db-migrate up` to set up database tables
+###### Run `yarn db:up` to set up database tables
 
 ###### Run `yarn compile` to transform app from ts to js 
 
 ###### Run `yarn start` to start the server.
 
-##### Use `yarn test` to run more than 40 test case
+##### Use `yarn test` to run more than 40 test case 
 
 ## API Endpoints:
 
